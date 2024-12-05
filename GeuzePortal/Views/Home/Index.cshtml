@@ -1,0 +1,21 @@
+﻿@using GeuzePortal
+<!-- Javascript -->
+@Scripts.Render("~/bundles/js")
+
+<script>
+    var gameversion = "You are running @Globals.WebsiteTitle @Globals.Version on Three.JS Rev " + THREE.REVISION;
+    console.log(gameversion);
+</script>
+
+@{Html.RenderPartial("MainMenu");}
+@{Html.RenderPartial("Hud");}
+
+<!-- Shaders -->
+<script data-src="~/Content/shaders/displacement_vertex.js" data-name="Displacement" type="x-shader/x-vertex"></script>
+<script data-src="~/Content/shaders/displacement_fragment.js" data-name="Displacement" type="x-shader/x-fragment"></script>
+<script data-src="~/Content/shaders/noise_vertex.js" data-name="Noise" type="x-shader/x-vertex"></script>
+<script data-src="~/Content/shaders/noise_fragment.js" data-name="Noise" type="x-shader/x-fragment"></script>
+<!-- End Shaders -->
+
+<!-- Geuze Portal scripts -->
+@Scripts.Render("~/bundles/app")

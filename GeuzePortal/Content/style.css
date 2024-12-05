@@ -1,0 +1,108 @@
+﻿/*
+    ------------------ 
+    Css for the layout
+    ------------------
+*/
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    color: #ffffff;
+    background-color: transparent;
+}
+
+canvas {
+    width: 100%;
+    height: 100%;
+}
+
+#instructions {
+    z-index: 100;
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    text-align: center;
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.50);
+}
+
+    #instructions div {
+        margin: auto;
+    }
+
+#controls {
+    right: 0px;
+    bottom: 0px;
+    width: 35px;
+    height: 53px;
+    margin: 10px;
+    background: url(images/mouse.png) no-repeat padding-box;
+}
+
+
+/* Hud styles */
+.hud {
+    position: absolute;
+    z-index: 50;
+}
+
+    .hud .hudLine {
+        display: table;
+        width: 290px;
+    }
+
+        .hud .hudLine > span {
+            display: table-cell;
+            background-color: rgba(0, 0, 0, 0.68);
+            color: #ffffff;
+            padding: 0 10px 0 10px;
+        }
+
+    .hud .topradius {
+        -webkit-border-top-right-radius: 10px !important;
+        -moz-border-radius-topright: 10px !important;
+        border-top-right-radius: 10px !important;
+    }
+
+    .hud .bottomradius {
+        -webkit-border-bottom-right-radius: 10px !important;
+        -moz-border-radius-bottomright: 10px !important;
+        border-bottom-right-radius: 10px !important;
+    }
+
+    .hud .progress {
+        display: table-cell;
+        position: relative;
+        width: 200px;
+        background-color: rgba(0, 0, 0, 0.68);
+    }
+
+        .hud .progress span {
+            position: absolute;
+            display: block;
+            width: 100%;
+        }
+
+
+/* No shadow on the element with this class applied */
+.noshadow, .noshadow:focus {
+    outline: none !important;
+    border: none !important;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    box-shadow: none !important;
+    -moz-transition: none !important;
+    -webkit-transition: none !important;
+    -webkit-border-radius: 0px !important;
+    -moz-border-radius: 0px !important;
+    border-radius: 0px !important;
+}
+
+/* Make text appear strong */
+.bold {
+    font-weight: bold;
+}
